@@ -5,7 +5,7 @@ description: Use when you need to reason through a decision, understand a proble
 
 ## 1. Read context
 
-Read any relevant files in CWD that the user references or that relate to the topic — code, docs, notes, research, plans. Note what exists and what doesn't — this determines behavior.
+Scan CWD for context related to the topic: code, docs, existing `thinking/` sessions, `research/` artifacts, plans, and recent commits. Read what's relevant — don't deep-read everything. Note what exists and what's absent; both inform the Frame. If the user references specific files, prioritize those.
 
 ## 2. Frame
 
@@ -36,7 +36,7 @@ Detect the thinking pattern from `$ARGUMENTS` and context.
 **Research** ("look into X", "how does Y work", "what are the patterns for Z") **bypasses the main workflow:**
 - Triggered by: competitor/pattern inquiries, focused factual questions, "look into", "how does X handle", "what are the approaches for".
 - Conduct research autonomously — no Frame stop, no session note.
-- Save findings to `research/{topic-slug}.md` with: H1 title summarizing the research question, date, question, findings, key takeaways (2-3 bullets), sources (if applicable).
+- Save findings to `research/{topic-slug}.md` with: H1 title in the format `# Research: <title>` summarizing the research question, date, question, findings, key takeaways (2-3 bullets), sources (if applicable).
 - Present a summary with key takeaways. The research artifact is the only output.
 
 If ambiguous, ask one interactive question (`AskUserQuestion` or `requestUserInput`): **A. Understand something** (orient), **B. Surface something** (hunch), **C. Explore a what-if**, **D. Decide between options**, **E. Research something** (research).
@@ -80,7 +80,7 @@ If no changes needed: skip to Capture.
 
 Write a session note to `thinking/YYYY-MM-DD-<topic-slug>.md` (create directory if needed), where `<topic-slug>` is 2–4 hyphenated words derived from the framed question (e.g., `thinking/2026-03-24-auth-token-expiry.md`).
 
-Start the file with an H1 title that summarizes the session content (not the filename repeated). Example: `# Should we expire auth tokens on role change?`
+Start the file with an H1 title in the format `# Thinking: <title>`, where `<title>` summarizes the session content. Example: `# Thinking: Should we expire auth tokens on role change?`
 
 - **Type:** Thinking
 - **Session summary** — 2-3 sentences
@@ -91,11 +91,14 @@ Start the file with an H1 title that summarizes the session content (not the fil
 - **Changes made** — what was modified, or "None"
 - **Open threads** — anything surfaced but not resolved
 
+**Anti-pattern: "This doesn't need structured thinking."** The temptation to skip framing is strongest on decisions that feel obvious. Those are exactly where unexamined assumptions do the most damage. The frame can be two sentences, but it must exist.
+
 ## Rules
 
 - Be direct. No preamble, no filler. Labeled bullets for discrete items, prose for narrative.
 - Quote sources, don't summarize — the user needs to see exactly what you're referencing.
 - Steel-man all positions. Don't lead the user toward a predetermined answer.
+- Prefer labeled options (A/B/C) over open-ended questions — reduces friction and shows you've done enough thinking to enumerate the space.
 - YAGNI: if thinking resolves without needing file changes, don't invent changes to make.
 - If thinking reveals an upstream problem, name it. Don't patch downstream files to work around it.
 - Don't skip thinking because it "seems obvious." The user invoked it for a reason.

@@ -5,7 +5,9 @@ description: Use when you need to explore a problem space and generate genuinely
 
 ## Phase 1 — Frame
 
-Ingest everything provided — tickets, notes, screenshots, URLs, or a verbal description of the problem space. After ingesting, identify what's missing that would materially change the directions you'd generate. Don't assess against a fixed checklist — different problems have different shapes. The test is: **would knowing this change what I produce in Phase 2?**
+Ingest everything provided — tickets, notes, screenshots, URLs, or a verbal description of the problem space. Before asking questions, scan CWD for relevant context: existing briefs, concepts, READMEs, docs, or prior work related to the topic. Skim — don't deep-read. Use what you find to ask sharper questions. If nothing relevant exists, proceed from the user's input alone.
+
+After ingesting, identify what's missing that would materially change the directions you'd generate. Don't assess against a fixed checklist — different problems have different shapes. The test is: **would knowing this change what I produce in Phase 2?**
 
 **Depth rules:**
 - **Always ask at least one question.** Even rich input has assumptions worth surfacing.
@@ -20,7 +22,7 @@ Questions focus on:
 - What "good enough" vs "great" looks like
 - Whether this is blue-sky or constrained exploration
 
-One question per (`AskUserQuestion` or `requestUserInput`) call. Never batch.
+One question per (`AskUserQuestion` or `requestUserInput`) call. Never batch. Prefer multiple-choice when the option space is knowable (e.g., "Are you thinking (A) dashboard-style overview, (B) task-by-task flow, or (C) something else?"). Use open-ended only when the answer space is genuinely unbounded.
 
 The framing conversation is part of the creative process — questions spark ideas, pushback refines constraints. Let it breathe.
 
@@ -43,7 +45,9 @@ Save the problem brief to `brief-<slug>.md` in the current directory (e.g., `bri
 
 ## Phase 2 — Generate
 
-Generate **5–8 genuinely different directions**. "Different" means different interaction models, not UI variations on the same idea. Include at least 1–2 unconventional or provocative directions that push beyond the obvious.
+Generate **5–8 genuinely different directions**. Scale to problem scope: 3–5 for tightly constrained problems where the solution space is narrow, 5–8 for open territory. Scale sketch depth similarly — a tight problem needs crisper sketches, not more of them. Don't generate volume for its own sake.
+
+"Different" means different interaction models, not UI variations on the same idea. Include at least 1–2 unconventional or provocative directions that push beyond the obvious.
 
 Constraints from framing feed directly into generation — directions should be actionable given what was surfaced, unless the user explicitly asked for blue-sky.
 
@@ -61,7 +65,7 @@ Wireframe conventions:
 - Realistic placeholder text, never lorem ipsum
 - Annotations: `// comment` after right border
 
-Present all directions at once. Stop and wait for the user to respond.
+Present all directions at once. After presenting, highlight the 2–3 that span the widest range of the solution space and ask which territory interests the user — this focuses Phase 3 without forcing premature convergence. Stop and wait.
 
 ## Phase 3 — Explore
 
@@ -75,6 +79,8 @@ If asked to save, write to `concept-<slug>.md` (reuse the slug from the brief). 
 
 The user drives convergence. Don't pick winners — give enough material to pick well.
 
+**Anti-pattern: "The first direction is clearly right."** If one direction feels obviously correct before generation, you haven't pushed the range far enough. The obvious direction gets included, but it should have genuine competition. The value of this skill is in directions you wouldn't have considered — if generation just confirms the obvious, it failed.
+
 ## Rules
 
 - Be direct. No preamble, no filler.
@@ -84,4 +90,3 @@ The user drives convergence. Don't pick winners — give enough material to pick
 - Don't converge for the user. Present material, let them judge.
 
 $ARGUMENTS
-

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# install.sh — Install, uninstall, update, or check status of Partner skills
+# install.sh — Install, uninstall, update, or check status of Framing Partner skills
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-SKILLS_DIR="$SCRIPT_DIR/skills"
+SKILLS_DIR="$SCRIPT_DIR"
 
 # Indexed arrays for bash 3.2 compatibility (no associative arrays)
 PLATFORM_NAMES=()
@@ -181,7 +181,7 @@ usage() {
   echo ""
   echo "  (no args)   Install skills to all detected platforms"
   echo "  install     Same as no args"
-  echo "  uninstall   Remove Partner symlinks (leaves the clone intact)"
+  echo "  uninstall   Remove Framing Partner symlinks (leaves the clone intact)"
   echo "  update      git pull + re-install + prune stale links"
   echo "  status      Show what's linked where"
 }
@@ -192,11 +192,11 @@ detect_platforms
 
 case "${1:-install}" in
   install)
-    echo "Installing Partner skills..."
+    echo "Installing Framing Partner skills..."
     do_install
     ;;
   uninstall)
-    echo "Uninstalling Partner skills..."
+    echo "Uninstalling Framing Partner skills..."
     do_uninstall
     ;;
   update)
