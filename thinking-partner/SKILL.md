@@ -13,7 +13,7 @@ Detect the thinking pattern from `$ARGUMENTS` and context.
 
 **Orient ("help me understand this ticket/problem"):**
 - Triggered by: ticket content, task descriptions, "what is this asking" questions, or raw context with no existing work.
-- If research is needed, conduct and present separately. Save substantial findings to `topics/<topic>/research-<slug>.md` (self-contained: title, date, question, findings, sources).
+- If substantial research is needed, suggest `/research-partner` to investigate separately. Lightweight inline lookups (quick definitions, fact checks) can stay within Orient.
 - **Output:** scoped problem statement with initial level-of-effort signal
 
 **Hunch ("something feels off"):**
@@ -33,13 +33,7 @@ Detect the thinking pattern from `$ARGUMENTS` and context.
 
 **STOP after Frame** (Orient/Hunch/What-if/Decision only). Present the framed output and wait for the user to confirm or adjust before proceeding to Think.
 
-**Research** ("look into X", "how does Y work", "what are the patterns for Z") **bypasses the main workflow:**
-- Triggered by: competitor/pattern inquiries, focused factual questions, "look into", "how does X handle", "what are the approaches for".
-- Conduct research autonomously — no Frame stop, no session note.
-- Save findings to `topics/<topic>/research-<slug>.md` with: H1 title in the format `# Research: <title>` summarizing the research question, date, question, findings, key takeaways (2-3 bullets), sources (if applicable).
-- Present a summary with key takeaways. The research artifact is the only output.
-
-If ambiguous, ask one interactive question (`AskUserQuestion` or `requestUserInput`): **A. Understand something** (orient), **B. Surface something** (hunch), **C. Explore a what-if**, **D. Decide between options**, **E. Research something** (research).
+If ambiguous, ask one interactive question (`AskUserQuestion` or `requestUserInput`): **A. Understand something** (orient), **B. Surface something** (hunch), **C. Explore a what-if**, **D. Decide between options**. If the request is primarily research-oriented ("look into X", "how does Y work"), redirect to `/research-partner`.
 
 ## 3. Think
 
@@ -66,7 +60,6 @@ End with 2-3 labeled next moves reflecting the actual situation, not a generic m
 | Hunch | Pause after tensions, check in after each analysis piece | 2-3 |
 | What-if | Four-part analysis as one block, then "worth pursuing or dead end?" | 1 |
 | Decision | Four-part analysis as one block, then "which way are you leaning?" Pressure-test before Act. | 1 |
-| Research | Autonomous — research, save artifact, present summary | 0 (no stops) |
 
 Each pause = **stop and wait** — do not continue to the next phase in the same message. Prefer labeled options (A/B/C) over open-ended questions.
 

@@ -6,6 +6,8 @@ AI coding agent skills for the design framing loop — reason through decisions,
 
 **`/thinking-partner`** — Reason through a decision, understand a problem, explore a hunch, or compare options. Works with or without existing project context. Reads your codebase and docs to ground the conversation, then follows structured thinking patterns (orient, hunch, what-if, decision) to help you reach clarity.
 
+**`/research-partner`** — Research a topic in depth: competitor patterns, technical approaches, industry practices, or focused factual questions. Produces self-contained research artifacts that feed into thinking, ideation, and scoping.
+
 **`/ideation-partner`** — Explore a problem space and generate genuinely different solution directions. Works from tickets, notes, screenshots, or a verbal description. Asks targeted questions to frame the problem, then produces multiple distinct concepts — not variations on one idea.
 
 **`/next-move-partner`** — Figure out what design move to make next when you're unclear where to focus or what's been missed. Scans artifacts, shows a compact status map, and recommends which skill to invoke.

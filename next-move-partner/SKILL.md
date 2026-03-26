@@ -52,6 +52,7 @@ Based on the status map, recommend the **single highest-value next move** with b
 - Concepts exist but assumptions are untested? A thinking session on the riskiest bet would help — e.g., "Run `/thinking-partner` to stress-test the progressive-elicitation concept."
 - Wireframes exist but haven't been validated? User testing would surface problems before you scope.
 - Design is validated but not scoped? Scoping breaks it into buildable pieces — e.g., "Run `/scoping-partner` on the interaction-patterns concept."
+- Problem framed but key assumptions lack evidence? Run `/research-partner` to investigate before committing to a direction.
 - Work is scoped but stakeholders haven't bought in? A pitch gets alignment.
 
 Name the specific skill to invoke, reference the topic context, and suggest input.
