@@ -5,7 +5,7 @@ description: Use when you have a chosen direction and need to break it into prio
 
 ## Phase 1 — Understand
 
-Read the concept, brief, wireframes, or other artifacts the user points to. Scan `topics/` for related context — prior thinking sessions, research, test results — that informs scope decisions.
+Read the concept, brief, wireframes, or other artifacts the user points to. Scan `topics/` for related context — prior orient or reasoning sessions, research, test results — that informs scope decisions.
 
 Ask clarifying questions (one per `AskUserQuestion` or `requestUserInput` call, never batch). The test for each question: **would knowing this change how I'd scope this?** Stop when answers stop changing your thinking.
 
@@ -94,7 +94,7 @@ All file paths in this skill use `topics/<topic>/` as the root.
 - One question per (`AskUserQuestion` or `requestUserInput`) call.
 - MVP is the smallest thing that works, not the smallest thing you can ship. "Works" means a user can accomplish the core task end-to-end.
 - Don't pad MVP with "foundation" work that doesn't deliver user value. Infrastructure belongs in tickets, not tier justifications.
-- If the source artifacts are too vague to scope concretely, say so. Recommend a thinking or ideation session to fill the gaps rather than guessing.
+- If the source artifacts are too vague to scope concretely, say so. Recommend `/orient-partner` to understand the problem or `/ideation-partner` to explore directions rather than guessing.
 - T-shirt sizes are rough signals, not commitments. Don't pretend to precision you don't have.
 
 $ARGUMENTS

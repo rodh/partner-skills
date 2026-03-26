@@ -1,20 +1,15 @@
 ---
-name: thinking-partner
-description: Use when you need to reason through a decision, understand a problem, explore a hunch, or compare options — works with or without existing project context
+name: reasoning-partner
+description: Use when you need to reason through a decision, stress-test a hunch, or explore a what-if — works with or without existing project context
 ---
 
 ## 1. Read context
 
-Scan CWD for context related to the topic: code, docs, existing `topics/*/thinking-*.md` sessions, `topics/*/research-*.md` artifacts, plans, and recent commits. Read what's relevant — don't deep-read everything. Note what exists and what's absent; both inform the Frame. If the user references specific files, prioritize those.
+Scan CWD for context related to the topic: code, docs, existing `topics/*/reasoning-*.md` sessions, `topics/*/research-*.md` artifacts, `topics/*/orient-*.md` artifacts, plans, and recent commits. Read what's relevant — don't deep-read everything. Note what exists and what's absent; both inform the Frame. If the user references specific files, prioritize those.
 
 ## 2. Frame
 
-Detect the thinking pattern from `$ARGUMENTS` and context.
-
-**Orient ("help me understand this ticket/problem"):**
-- Triggered by: ticket content, task descriptions, "what is this asking" questions, or raw context with no existing work.
-- If substantial research is needed, suggest `/research-partner` to investigate separately. Lightweight inline lookups (quick definitions, fact checks) can stay within Orient.
-- **Output:** scoped problem statement with initial level-of-effort signal
+Classify the request from `$ARGUMENTS` and context.
 
 **Hunch ("something feels off"):**
 - Present compact state summary (one sentence per relevant file/area), then ask "what's nagging you?"
@@ -31,21 +26,13 @@ Detect the thinking pattern from `$ARGUMENTS` and context.
 - Frame as "[X] vs [Y] given [relevant context]"
 - **Output:** the framed decision
 
-**STOP after Frame** (Orient/Hunch/What-if/Decision only). Present the framed output and wait for the user to confirm or adjust before proceeding to Think.
+**STOP after Frame** (Hunch/What-if/Decision only). Present the framed output and wait for the user to confirm or adjust before proceeding to Think.
 
-If ambiguous, ask one interactive question (`AskUserQuestion` or `requestUserInput`): **A. Understand something** (orient), **B. Surface something** (hunch), **C. Explore a what-if**, **D. Decide between options**. If the request is primarily research-oriented ("look into X", "how does Y work"), redirect to `/research-partner`.
+If ambiguous, ask one interactive question (`AskUserQuestion` or `requestUserInput`): **A. Surface something** (hunch), **B. Explore a what-if**, **C. Decide between options**. If the request is primarily about understanding context (a ticket, task, or project), redirect to `/orient-partner`. If the request is primarily research-oriented ("look into X", "how does Y work"), redirect to `/research-partner`.
 
 ## 3. Think
 
-**Orient pattern — three-part analysis:**
-
-1. **Breakdown** — decompose the problem into constituent parts, name each clearly
-2. **Landscape** — what exists already, what's new, what's uncertain. Integrate any external research.
-3. **Effort assessment** — what level of engagement each part warrants (light touch vs. deep dive)
-
-End with 2-3 labeled next moves reflecting the actual situation, not a generic menu.
-
-**Hunch/What-if/Decision patterns — four-part analysis:**
+**Four-part analysis:**
 
 1. **What the evidence says** — pull relevant content from files/context, quote specific lines/sections
 2. **What's at stake** — concrete downstream effects if we go one way vs another
@@ -56,7 +43,6 @@ End with 2-3 labeled next moves reflecting the actual situation, not a generic m
 
 | Pattern | Delivery | Exchanges |
 |---------|----------|-----------|
-| Orient | Full breakdown, then ask what to dig into | 1 (focused) to 2-3 (complex) |
 | Hunch | Pause after tensions, check in after each analysis piece | 2-3 |
 | What-if | Four-part analysis as one block, then "worth pursuing or dead end?" | 1 |
 | Decision | Four-part analysis as one block, then "which way are you leaning?" Pressure-test before Act. | 1 |
@@ -71,11 +57,11 @@ If no changes needed: skip to Capture.
 
 ## 5. Capture
 
-Write a session note to `topics/<topic>/thinking-YYYY-MM-DD-<slug>.md`, where `<slug>` is 2–4 hyphenated words derived from the framed question (e.g., `topics/auth-tokens/thinking-2026-03-24-auth-token-expiry.md`).
+Write a session note to `topics/<topic>/reasoning-YYYY-MM-DD-<slug>.md`, where `<slug>` is 2–4 hyphenated words derived from the framed question (e.g., `topics/auth-tokens/reasoning-2026-03-24-auth-token-expiry.md`).
 
-Start the file with an H1 title in the format `# Thinking: <title>`, where `<title>` summarizes the session content. Example: `# Thinking: Should we expire auth tokens on role change?`
+Start the file with an H1 title in the format `# Reasoning: <title>`, where `<title>` summarizes the session content. Example: `# Reasoning: Should we expire auth tokens on role change?`
 
-- **Type:** Thinking
+- **Type:** Reasoning
 - **Session summary** — 2-3 sentences
 - **Trigger** — the user's opening statement
 - **Frame** — the precise question or decomposition arrived at

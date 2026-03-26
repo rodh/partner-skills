@@ -71,6 +71,6 @@ All file paths in this skill use `topics/<topic>/` as the root.
 - Landscape surveys and deep dives earn their depth. Don't pad with shallow findings to look thorough.
 - If research turns up nothing useful, say so. Don't dress up thin results.
 - Artifacts must be self-contained. Someone reading the file with no conversation context should understand the findings.
-- If research reveals a decision point, suggest `/thinking-partner`. If it opens up a solution space, suggest `/ideation-partner`.
+- If research reveals a decision point, suggest `/reasoning-partner`. If it opens up a solution space, suggest `/ideation-partner`.
 
 $ARGUMENTS
