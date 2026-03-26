@@ -1,11 +1,11 @@
 ---
 name: research-partner
-description: Use when you need to research a topic — competitor patterns, technical approaches, industry practices, or focused factual questions
+description: Use when you need to research a topic — look into competitor patterns, technical approaches, how something works, or answer focused factual questions
 ---
 
 ## 1. Scope
 
-Ingest the research question from `$ARGUMENTS`. Scan `topics/` for existing `research-*.md` artifacts that overlap — if a prior artifact already answers the question, surface it instead of re-researching.
+Ingest the research question from `$ARGUMENTS`. Scan CWD for context related to the topic: code, docs, existing `topics/*/research-*.md` artifacts, plans, and recent commits. Read what's relevant — don't deep-read everything. If a prior artifact already answers the question, surface it instead of re-researching.
 
 Classify depth:
 
@@ -22,6 +22,10 @@ For **quick lookup**: proceed directly to Investigate with no stop.
 Conduct research using available tools — web search, web fetch, codebase scan, whatever fits the question. Work iteratively: follow leads, cross-reference sources, and fill gaps.
 
 Organize findings by **theme or approach**, not by source. Group related information together even if it came from different places.
+
+If findings shift the question, pause and restate the adjusted scope before continuing. Don't let the investigation silently drift.
+
+Know when to stop: if the last 2-3 sources are confirming what you already found without adding new dimensions, move to Synthesize.
 
 ## 3. Synthesize
 
@@ -45,6 +49,8 @@ Save to `topics/<topic>/research-<slug>.md` with:
 
 The artifact must be **self-contained** — readable without conversation context.
 
+**Anti-pattern: "I'll just start searching."** The temptation to skip scoping is strongest when the question feels obvious. But unscoped research sprawls — you end up with a pile of links organized by when you found them, not by what they mean. Even a one-line scope ("Quick lookup: what's the max payload size for X?") keeps the investigation focused.
+
 ## Topic Folder Convention
 
 All artifacts are saved under `topics/<topic>/`. Before the first save in a session:
@@ -65,5 +71,6 @@ All file paths in this skill use `topics/<topic>/` as the root.
 - Landscape surveys and deep dives earn their depth. Don't pad with shallow findings to look thorough.
 - If research turns up nothing useful, say so. Don't dress up thin results.
 - Artifacts must be self-contained. Someone reading the file with no conversation context should understand the findings.
+- If research reveals a decision point, suggest `/thinking-partner`. If it opens up a solution space, suggest `/ideation-partner`.
 
 $ARGUMENTS
