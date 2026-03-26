@@ -1,4 +1,4 @@
-# Framing Partner Skills
+# Design Framing Skills
 
 AI coding agent skills for the full design framing loop — reason through decisions, explore problem spaces, generate divergent directions, wireframe solutions, validate with simulated users, scope into buildable work, and pitch the result to stakeholders.
 
@@ -19,8 +19,8 @@ AI coding agent skills for the full design framing loop — reason through decis
 ## Install
 
 ```bash
-git clone https://github.com/rodhoward/framing-partner-skills.git ~/.local/share/framing-partner-skills
-~/.local/share/framing-partner-skills/install.sh
+git clone https://github.com/rodh/design-framing-skills.git ~/.local/share/design-framing-skills
+~/.local/share/design-framing-skills/install.sh
 ```
 
 The install script detects supported platforms and symlinks each skill into the appropriate skills directory. Symlinks keep them updatable with `git pull`.
