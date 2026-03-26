@@ -10,10 +10,6 @@ AI coding agent skills for the full design framing loop — reason through decis
 
 ### New skills
 
-**`/wireframing-partner`** — Turn a concept, ticket, or design idea into structural ASCII wireframes with full flows, states, and edge cases. Makes directions concrete enough to evaluate and build from.
-
-**`/user-testing-partner`** — Validate a design against realistic simulated user behavior. Works from wireframes, sketches, screenshots, or a description. Surfaces usability issues before you commit to building.
-
 **`/next-move-partner`** — Scan your design artifacts and recommend the highest-leverage next step. Shows a compact status map of what exists and what's missing, then suggests which skill to invoke and with what input. A quick diagnostic, not a workflow.
 
 **`/pitch-partner`** — Reframe your design work for a specific audience and format. Takes briefs, concepts, or session notes and restructures them into one-pagers, async messages, tickets, or talking points — tuned to whether you're pitching leadership, a teammate, or a cross-functional partner.
