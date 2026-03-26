@@ -1,13 +1,15 @@
 ---
 name: scoping-partner
-description: Use when you have a chosen direction and need to break it into prioritized scope tiers and draft tickets for buildable work
+description: Use when you have a chosen direction and need to break it into prioritized scope tiers
 ---
 
 ## Phase 1 — Understand
 
 Read the concept, brief, wireframes, or other artifacts the user points to. Scan CWD for related context — prior thinking sessions, research, test results — that informs scope decisions.
 
-Ask clarifying questions (one per `AskUserQuestion` or `requestUserInput` call, never batch) about constraints that would change how you'd scope this:
+Ask clarifying questions (one per `AskUserQuestion` or `requestUserInput` call, never batch). The test for each question: **would knowing this change how I'd scope this?** Stop when answers stop changing your thinking.
+
+Areas to probe as needed — not a sequential checklist:
 
 - **Team** — who's building this, how many people, what skills
 - **Timeline** — is there a deadline, a release train, or open-ended
@@ -15,7 +17,7 @@ Ask clarifying questions (one per `AskUserQuestion` or `requestUserInput` call, 
 - **What exists** — what's already built that this extends or replaces
 - **Dependencies** — external teams, APIs, approvals that gate work
 
-The test: **would knowing this change how I'd scope this?** Stop when answers stop changing your thinking. If the user says "just go" or similar, proceed with reasonable assumptions and flag them.
+If the user says "just go" or similar, proceed with reasonable assumptions and flag them.
 
 ## Phase 2 — Decompose
 
@@ -72,6 +74,8 @@ Structure:
 - **Tickets** — full ticket details, grouped by tier
 - **Deferred items** — nice-to-haves with rationale for deferral
 - **Open questions** — unknowns that need spikes or decisions before work starts
+
+**Anti-pattern: "Scope the whole vision."** Scoping works on a chosen direction, not a feature wish list. If you haven't converged on a direction, run `/ideation-partner` first. Scoping an unconverged design produces tickets nobody builds.
 
 ## Rules
 

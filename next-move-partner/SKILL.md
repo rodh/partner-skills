@@ -1,6 +1,6 @@
 ---
 name: next-move-partner
-description: Use when you want to know what design move to make next — scans existing artifacts and recommends the highest-leverage next step
+description: Use when you want to know what design move to make next — unclear where to focus or what's been missed
 ---
 
 ## 1. Scan
@@ -51,11 +51,14 @@ Name the specific skill to invoke and suggest input — e.g., "Run `/ideation-pa
 
 If the user has a different instinct, respect it. This skill advises — it doesn't dictate.
 
+**Anti-pattern: "I already know what's next."** The value isn't confirming your plan — it's surfacing what the status map reveals that you aren't seeing. If you skip the scan, you build on stale context or miss that an artifact has drifted out of alignment.
+
 ## Rules
 
 - Be direct. Status map + one recommendation + suggested invocation. No preamble.
 - This is a diagnostic, not a workflow. Fast in, fast out.
 - Don't deep-read artifacts — skim titles and structure to assess completeness.
 - If nothing exists yet, say so and recommend starting with `/thinking-partner` to frame the problem or `/ideation-partner` if the problem is already clear.
+- If multiple moves are equally high-value, say so and let the user choose. Don't force a single recommendation when the situation is genuinely ambiguous.
 
 $ARGUMENTS

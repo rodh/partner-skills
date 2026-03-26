@@ -1,6 +1,6 @@
 ---
 name: pitch-partner
-description: Use when you need to communicate design work to a specific audience — reframes artifacts into one-pagers, async messages, tickets, or talking points
+description: Use when you need to communicate design work to a specific audience — stakeholders, teammates, clients, or cross-functional partners
 ---
 
 ## Phase 1 — Gather
@@ -9,13 +9,13 @@ Read the artifacts the user points to — session notes, briefs, concepts, wiref
 
 Then ask (one question per `AskUserQuestion` or `requestUserInput` call, never batch):
 
-1. **Who's the audience?** — Leadership, a teammate who'll build it, a cross-functional partner, a client? Their role shapes what to emphasize.
-2. **What format?** Offer options based on the situation:
+1. **What decision are you asking them to make?** Or are you informing, not asking? This changes the entire framing — a request for approval needs different emphasis than a status update.
+2. **Who's the audience?** — Leadership, a teammate who'll build it, a cross-functional partner, a client? Their role shapes what to emphasize.
+3. **What format?** Offer options based on the situation:
    - **One-pager** — structured: problem, proposal, why now, risks, ask
    - **Async message** — Slack/email: concise, scannable, links to detail
    - **Ticket/story** — problem statement, acceptance criteria, context
    - **Talking points** — for a live conversation: what to lead with, what to have ready if asked
-3. **What decision are you asking them to make?** Or are you informing, not asking? This changes the entire framing — a request for approval needs different emphasis than a status update.
 
 Stop when you have enough to frame. If the user says "just go" or similar, proceed with reasonable defaults and note assumptions.
 
@@ -61,6 +61,8 @@ Produce the artifact in the agreed format:
 - Context (link to brief/concept, key constraints)
 - Size estimate if scoping exists
 
+Pitch tickets frame the problem for stakeholder understanding. For implementation-ready tickets with dependencies and sizing, use `/scoping-partner`.
+
 **Talking points:**
 - Opening — what to lead with (1-2 sentences)
 - Key points — 3-5 bullets to cover
@@ -71,7 +73,11 @@ Present the full draft. **Stop and wait** for feedback.
 
 ## Phase 4 — Refine
 
-Iterate on tone, emphasis, scope, or framing based on user feedback. 1-2 rounds is typical. When the user is satisfied, save.
+Iterate on tone, emphasis, scope, or framing based on user feedback. 1-2 rounds is typical.
+
+Common refinement axes: tone (too formal/informal), length (cut or expand), emphasis (wrong thing leading), missing context (reader won't have enough to decide).
+
+When the user is satisfied, save.
 
 **Save to:**
 - One-pager: `pitch-{slug}.md`
@@ -80,6 +86,8 @@ Iterate on tone, emphasis, scope, or framing based on user feedback. 1-2 rounds 
 - Talking points: `pitch-{slug}.md`
 
 Start the file with an H1 title: `# Pitch: <descriptive title>` (or `# Ticket: <title>` for ticket format). Derive the slug from the core topic — 2-4 hyphenated words.
+
+**Anti-pattern: "Just clean up my notes."** This skill reframes, it doesn't summarize. If the output reads like a shorter version of the input, the pitch failed. The reader has a different mental model — the pitch restructures information for their brain, not yours.
 
 ## Rules
 
