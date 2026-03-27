@@ -1,6 +1,6 @@
 ---
 name: reasoning-partner
-description: Use when you need to reason through a decision, stress-test a hunch, or explore a what-if — works with or without existing project context
+description: Use when you're facing a decision, something feels off, or you want to explore a what-if — stress-tests assumptions through structured evidence-and-stakes analysis
 ---
 
 ## 1. Read context

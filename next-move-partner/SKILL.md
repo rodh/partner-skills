@@ -12,9 +12,6 @@ Scan `topics/` for all topic folders. Within each, identify artifacts by filenam
 - `research-*.md` findings
 - `brief-*.md` problem briefs
 - `concept-*.md` concept explorations
-- `wireframes-*.md` wireframes
-- `test-results-*.md` user test results
-- `personas-*.md` persona definitions
 - `scope-*.md` scoping documents
 - `pitch-*.md` / `ticket-*.md` pitch artifacts
 

@@ -1,6 +1,6 @@
 ---
 name: orient-partner
-description: Use when you need to understand a ticket, task, or project context before deciding what to do next
+description: Use when you need to break down and map a ticket, task, or project context — what the parts are, where complexity hides, and what level of effort each part warrants
 ---
 
 ## 1. Scope

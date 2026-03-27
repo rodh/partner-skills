@@ -18,6 +18,19 @@ AI coding agent skills for the design framing loop — reason through decisions,
 
 **`/scoping-partner`** — Break a chosen direction into prioritized scope tiers (MVP, should-have, nice-to-have). Decomposes features, sequences by dependencies, and produces tickets with acceptance criteria and T-shirt sizing.
 
+## How they fit together
+
+The skills follow a natural design progression, though you can enter at any point:
+
+```
+Orient → Research → Reason → Ideate → Scope → Pitch
+(map)    (learn)   (decide)  (explore) (break down) (communicate)
+```
+
+**Orient** maps the problem. **Research** fills knowledge gaps. **Reasoning** works through decisions and assumptions. **Ideation** generates divergent directions. **Scoping** breaks a chosen direction into buildable tiers. **Pitch** communicates the result.
+
+Use `/next-move-partner` at any point to see where you are and what to do next.
+
 ## Install
 
 ```bash
