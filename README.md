@@ -23,8 +23,8 @@ AI coding agent skills for the design framing loop — reason through decisions,
 The skills follow a natural design progression, though you can enter at any point:
 
 ```
-Orient → Research → Reason → Ideate → Scope → Pitch
-(map)     (learn)     (decide)  (explore) (plan)  (share)
+Orient →  Research →  Reason →  Ideate →   Scope →  Pitch
+(map)     (learn)     (decide)  (explore)  (plan)   (share)
 ```
 
 **Orient** maps the problem. **Research** fills knowledge gaps. **Reasoning** works through decisions and assumptions. **Ideation** generates divergent directions. **Scoping** breaks a chosen direction into buildable tiers. **Pitch** communicates the result.
