@@ -8,7 +8,7 @@ AI coding agent skills for the design framing loop — reason through decisions,
 
 **`/research-partner`** — Look into a topic: competitor patterns, technical approaches, how something works, or focused factual questions. Produces self-contained research artifacts that feed into reasoning, ideation, and scoping.
 
-**`/reasoning-partner`** — Reason through a decision, stress-test a hunch, or explore a what-if. Works with or without existing project context. Reads your codebase and docs to ground the conversation, then follows structured reasoning (evidence, stakes, steel-man, assumptions) to help you reach clarity.
+**`/thinking-partner`** — Think something through: a decision, a hunch, a tradeoff, a strategy question, or anything that needs structured clarity before action. Calibrates depth and selects from composable analytical moves to match what you bring it.
 
 **`/ideation-partner`** — Explore a problem space and generate genuinely different solution directions. Works from tickets, notes, screenshots, or a verbal description. Asks targeted questions to frame the problem, then produces multiple distinct concepts — not variations on one idea.
 
@@ -23,11 +23,11 @@ AI coding agent skills for the design framing loop — reason through decisions,
 The skills follow a natural design progression, though you can enter at any point:
 
 ```
-Orient →  Research →  Reason →  Ideate →   Scope →  Pitch
-(map)     (learn)     (decide)  (explore)  (plan)   (share)
+Orient →  Research →  Think  →  Ideate →   Scope →  Pitch
+(map)     (learn)     (think)   (explore)  (plan)   (share)
 ```
 
-**Orient** maps the problem. **Research** fills knowledge gaps. **Reasoning** works through decisions and assumptions. **Ideation** generates divergent directions. **Scoping** breaks a chosen direction into buildable tiers. **Pitch** communicates the result.
+**Orient** maps the problem. **Research** fills knowledge gaps. **Thinking** works through decisions, hunches, tradeoffs, and assumptions. **Ideation** generates divergent directions. **Scoping** breaks a chosen direction into buildable tiers. **Pitch** communicates the result.
 
 Use `/next-move-partner` at any point to see where you are and what to do next.
 
