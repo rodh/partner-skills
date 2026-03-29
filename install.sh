@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# install.sh — Install, uninstall, update, or check status of Design Framing skills
+# install.sh — Install, uninstall, update, or check status of Design Partner skills
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -181,7 +181,7 @@ usage() {
   echo ""
   echo "  (no args)   Install skills to all detected platforms"
   echo "  install     Same as no args"
-  echo "  uninstall   Remove Design Framing symlinks (leaves the clone intact)"
+  echo "  uninstall   Remove Design Partner symlinks (leaves the clone intact)"
   echo "  update      git pull + re-install + prune stale links"
   echo "  status      Show what's linked where"
 }
@@ -192,11 +192,11 @@ detect_platforms
 
 case "${1:-install}" in
   install)
-    echo "Installing Design Framing skills..."
+    echo "Installing Design Partner skills..."
     do_install
     ;;
   uninstall)
-    echo "Uninstalling Design Framing skills..."
+    echo "Uninstalling Design Partner skills..."
     do_uninstall
     ;;
   update)
