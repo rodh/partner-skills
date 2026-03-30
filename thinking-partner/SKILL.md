@@ -70,6 +70,8 @@ If thinking surfaces that the user needs a different skill next, name it explici
 
 If no changes needed: skip to Capture.
 
+**Stop and wait** for the user to confirm before saving.
+
 ## 5. Capture
 
 Write a session note to `design-artifacts/<descriptive-name>--thinking.md`, where `<descriptive-name>` is 2-4 hyphenated words describing the artifact's focus (e.g., `design-artifacts/auth-token-expiry--thinking.md`).

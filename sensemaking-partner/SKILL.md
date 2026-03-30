@@ -37,7 +37,7 @@ Present a scoped problem statement with 2-3 labeled next moves reflecting the ac
 - Exploring solution directions (`/ideation-partner` if available)
 - Breaking work into prioritized scope (`/scoping-partner` if available)
 
-**Stop and wait.**
+**Stop and wait** for the user to confirm before saving.
 
 ## 4. Save
 

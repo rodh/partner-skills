@@ -53,7 +53,7 @@ Flag time-sensitive or blocking actions separately.
 
 Note open questions that could change the plan — places where new information would reshape priorities or workstream structure.
 
-**Stop and wait.**
+**Stop and wait** for the user to confirm before saving.
 
 ## Phase 5 — Capture
 

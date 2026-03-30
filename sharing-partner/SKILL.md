@@ -77,7 +77,7 @@ Iterate on tone, emphasis, scope, or framing based on user feedback. 1-2 rounds 
 
 Common refinement axes: tone (too formal/informal), length (cut or expand), emphasis (wrong thing leading), missing context (reader won't have enough to decide).
 
-When the user is satisfied, save.
+**Stop and wait** for the user to confirm before saving.
 
 **Save to:**
 - One-pager: `design-artifacts/<descriptive-name>--sharing.md`
